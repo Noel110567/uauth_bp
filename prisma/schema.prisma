@@ -1,0 +1,30 @@
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  summary   String
+  date      DateTime
+  slug      String   @unique
+  priority  Int      @default(0) // 1 = new/highlight, 0 = normal
+}
+// Prisma schema for your existing users table
+// Place this in prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  username   String   @unique
+  email      String   @unique
+  password   String
+  role       String   @default("user")
+  created_at DateTime @default(now())
+
+  @@map("users")
+}
