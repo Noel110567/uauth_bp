@@ -21,9 +21,9 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-2">Dashboard</h1>
-      <p>Welcome to the dashboard sample page.</p>
+    <div className="dashboard-main-bg p-6 relative overflow-hidden" style={{minHeight:'100vh'}}>
+      <h1 className="text-2xl font-bold mb-2 text-blue-100 drop-shadow-lg">Dashboard</h1>
+      <p className="text-blue-200 mb-4">Welcome to the dashboard sample page.</p>
       <NewsCarouselWrapper />
     </div>
   );
