@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 
 // Dynamic import for NewsFullStoryEditor (must be after all import statements)
-const NewsFullStoryEditor = dynamic(() => import("@/components/NewsFullStoryEditor"), { ssr: false });
+// const NewsFullStoryEditor = dynamic(() => import("@/components/NewsFullStoryEditor"), { ssr: false });
+import NewsFullStoryEditor from "../../../../components/NewsFullStoryEditor";
 
 type NewsItem = {
   id: number;
