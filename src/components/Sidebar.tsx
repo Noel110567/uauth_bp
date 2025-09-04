@@ -52,14 +52,14 @@ export function Sidebar() {
     <>
       {/* Burger button for mobile */}
       <button
-        className="sm:hidden fixed top-2 left-4 z-50 bg-blue-900 bg-opacity-80 rounded p-2 text-white focus:outline-none"
-        onClick={() => setSidebarOpen(true)}
-        aria-label="Open sidebar"
+        className="fixed top-2 left-4 z-50 bg-blue-900 bg-opacity-80 rounded p-2 text-white focus:outline-none"
+        onClick={() => setSidebarOpen((open) => !open)}
+        aria-label="Toggle sidebar"
       >
         <Bars3Icon className="w-7 h-7" />
       </button>
 
-      {/* Sidebar overlay for mobile */}
+      {/* Sidebar overlay for mobile/tablet, always visible on desktop */}
       <aside
         className={`
           fixed z-50 top-20 left-0 w-64
@@ -69,9 +69,10 @@ export function Sidebar() {
           rounded-r-2xl
           pt-6 pb-6
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-          sm:static sm:translate-x-0 sm:w-56
+          lg:static lg:translate-x-0 lg:w-56
+          block
         `}
-  style={{ height: 'auto' }}
+        style={{ height: 'auto' }}
       >
         {/* Close button for mobile */}
         <div className="flex sm:hidden justify-end p-2">

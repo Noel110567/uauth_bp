@@ -7,7 +7,7 @@ export default function HeaderWithSession() {
   const user = session?.user;
   return (
     <header className="w-full fixed top-0 left-0 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white px-6 py-3 shadow z-50 flex items-center justify-between">
-      <Link href="/" className="text-2xl md:text-3xl font-light tracking-tight hover:underline focus:outline-none">
+      <Link href="/" className="text-2xl pl-10 md:text-3xl font-light tracking-tight hover:underline focus:outline-none">
         The Sangguniang Bayan ng Capalonga
       </Link>
       <div className="flex items-center gap-3 min-w-[120px]">
