@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import NewsFullStoryEditor from "@/components/NewsFullStoryEditor";
+import NewsFullStoryEditor from "../../components/NewsFullStoryEditor";
 
   type NewsItem = {
     title: string;
